@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #645cff;
+    --primary-dark: #3c3799;
+    --grey-light:#f1f5f9;
+    --grey:#64748b;
+    --grey-dark: #0f172a;
+    --fluid-width: 90vw;
+    --max-width: 1170px;
+    --black: #222;
+    --white: #fff;
+    --letter-spacing: 2px;
+    --border-radius: 0.3rem;
+    --shadow-light: 0 5px 15px rgba(0,0,0,0.1);;
+    --shadow-dark: 0 5px 15px rgba(2, 1, 1, 0.548);
+    --transition: 0.3s ease-in-out all;
+}
+
+body{
+font-family: 'Poppins',
+sans-serif;
+line-height: 1.5;
+background: var(--grey-light);
+color: var(--grey-dark);
+}
+
+.blogs{
+    padding: 5rem 0;
+}
+
+.section-title{
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--letter-spacing);
+    margin-bottom: 2rem;
+}
+
+.blog-centre{
+width: var(--fluid-width);
+max-width: var(--max-width);
+margin: 0 auto;
+/* temporarily: no Grid/Flexbox */
+max-width: 500px;
+}
+
+.blog{
+    background: var(--white);
+    padding:0.75rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+    margin-bottom: 2rem;
+}
+
+.blog:hover{
+    box-shadow: var(--shadow-dark);
+}
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 0.5rem;
+}
+
+.blog{
+    background: linear-gradient(to bottom right, rgb(191, 191, 194), white);
+}
+
+
+.blog-content{
+    padding-bottom: 1rem;
+}
+
+@keyframes move{
+    0%{
+    transform: translateX(2px);
+    }
+    50%{
+    transform: translateX(25px);
+    }
+    100%{
+    translateX: (-35px);
+    }
+}
+
+i{
+    animation: move 5s infinite;
+}
+
+.blog-content span{
+    text-transform: uppercase;
+    color: var(--primary);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 600;
+}
+
+.blog-content h3{
+text-transform: capitalize;
+letter-spacing: var(--letter-spacing);
+}
+
+.blog-content p{
+color: var(--grey-dark);
+margin-bottom: 0.5rem;
+}
+
+.blog-content a{
+text-transform: capitalize;
+color: var(--primary-dark);
+font-weight: 500;
+text-decoration: none;
+}
+
+.blog-content a:hover{
+    text-decoration: underline;
+}
